@@ -1,0 +1,28 @@
+<div>
+    <form action="/adminpage/go/post" method="POST" class="form-control container" id="dis" style="min-height: 40vh; margin-bottom: 36vh; margin-top: 2vh;">
+        <div class="form-group"> 
+            <div class="radio">
+                <label>
+                    Enter the Go-Cheat keys, price and time:
+                </label>
+                <br>
+                <label for="keyNumber">Number</label></br>
+                <textarea type="text" name="keyNumber" placeholder="keyNumber" required rows=10 cols=50> </textarea>
+                <br>
+                <!-- <label for="Price">Price</label>
+                <input type="text" name="price" placeholder="price" required> -->
+                <br>
+                <label for="keyTime">Time</label>
+                <input type="radio" name="keyTime" placeholder="time" value="1" checked='true' required>
+                <label for="keyTime">1 days</label>
+                <!-- <input type="radio" name="keyTime" placeholder="time" value="3" required>
+                <label for="keyTime">3 days</label> -->
+                <input type="radio" name="keyTime" placeholder="time" value="7" required>
+                <label for="keyTime">7 days</label>
+                <input type="radio" name="keyTime" placeholder="time" value="30" required>
+                <label for="keyTime">30 days</label>
+            </div>
+        </div>
+        <button class="btn btn-lg btn-block btn-primary">Enter</button>
+    </form>
+</div>

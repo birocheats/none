@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="/css/login.css">
+<body>
+    <div id="outer-box">
+        <div class="box-form">
+            <div class="text-center-form">
+                <div id="form-heading">
+                    <h1>
+                        BiroCheats || Login
+                    </h1>
+
+                    <p>
+                        A place where you can find the geniune products and can trust
+                    </p>
+                </div>
+
+                <div id="form">
+
+                    <div id="left-portion-form">
+                        <a href="#">
+                            <button class="loginBtn pb loginBtn--facebook">
+                            Facebook
+                          </button>
+                        </a><br>
+                        <a href="#">
+                            <button class="loginBtn pb loginBtn--google space">
+                            Google
+                          </button>
+                        </a>
+                        <p>
+                            <a href="#">
+                        Sign Up With Email.
+                    </a> By signing up you indicate that you have read and agree to R/P
+                            <a href="#">Terms of Service</a> and
+                            <a href="#">Privacy Policy.</a>
+                        </p>
+                    </div>
+
+
+
+                    <form action="/users/create-session" method="post" id="right-portion-form">
+                        <label for="email" id="label" class="pb"> 
+                            Login
+                            </label>
+                        <input class="pb" placeholder="Email" type="email" name="email" id="email">
+                        <input class="pb" placeholder="password" type="password" name="password" id="pwd">
+                        <a href="#" class="pb">Forgot Password?</a>
+                        <button type="submit">Login</button>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId: '{your-app-id}',
+            cookie: true,
+            xfbml: true,
+            version: '{api-version}'
+        });
+
+        FB.AppEvents.logPageView();
+
+    };
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+
+    
+</script>

@@ -1,0 +1,40 @@
+<div>
+  Payment Summery <% if (nodata) {%>
+  <p>
+    YOUR CART IS EMPTY
+  </p>
+  <%}else{%>
+  <table>
+    <tr>
+      <th>ORDER NUMBER=><%= _id%></th>
+    </tr>
+    <tr>
+      <td>total Price => <%= totalPrice%></td>
+    </tr>
+    <tr>
+      <td>Coupon Code => <%= couponCode%></td>
+    </tr>
+    <tr>
+      <td>Coupon Applied => <%= couponApplicable%></td>
+    </tr>
+    <tr>
+      <td>Hack Name => <%= keyType %></td>
+    </tr>
+    <tr>
+      <td>Final Effective Price => <%= finalPrice%></td>
+    </tr>
+    <tr>
+      <td>Date => <%= _createdOn%></td>
+    </tr>
+    <tr>
+      <td>Wallet Balance: &nbsp; <%= user.money %></td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/cancleCurrentOrder"><button>CANCEL</button></a>
+        <a href="<%= onSuccess %>"><button>CONFIRM</button></a>
+      </td>
+    </tr>
+  </table>
+  <%}%>
+</div>

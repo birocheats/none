@@ -1,0 +1,13 @@
+.adminPage a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3%;
+    margin: 2%;
+}
+
+.adminPage{
+    padding-top: 5%;
+    box-sizing: border-box;
+    width: 15rem;
+}

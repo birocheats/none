@@ -1,0 +1,128 @@
+<div class="container">
+  <form
+    action="/shop/<%=redirectTo%>/purchase"
+    class="form-control"
+    style="min-height: 37vh; margin-bottom: 36vh; margin-top: 2vh;"
+    method="POST"
+  >
+    <div class="form-group">
+      <label class="control-label">Buy <%= pageName %> keys here !</label>
+      <div class="radio">
+        <label>
+          <input type="radio" name="keyTime" value="1" required checked="true" />
+          1 Day
+        </label>&nbsp;
+        <label>
+          <input type="radio" name="keyTime" value="7" required />
+          1 Week
+        </label>&nbsp;
+        <label>
+          <input type="radio" name="keyTime" value="30" required />
+          1 month
+        </label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>
+        <input type="number" name="quantity" value="1" required />
+        : Quantity
+      </label>
+    </div>
+    <div class="form-group">
+      <label>
+        <input type="text" name="couponCode" />
+        : Coupon Code
+      </label>
+    </div>
+    <button class="btn btn-lg btn-block btn-primary">Purchase</button>
+    <br />
+    <br />
+    <% if(pageName=="sharpshooter"){%>
+    <p><br>
+      Regional keys works in Limited country :- India, Pakistan, Bangladesh, Nepal, Thailand, Russia, Brazil, Southeast Asia (except Singapore). <br>
+      Users in other regions must purchase global keys. If a code6 error occurs during login, the user is not in the above area <br><br>
+
+Features<br>
+1.ESP (wall hack)<br>
+-Player names<br>
+-Health<br>
+-Team ID<br>
+-Vehicles<br>
+-Items<br>
+-Enemy weapon NEW！<br>
+-Out-of-sight enemy warning<br>
+-Danger warning<br>
+-Grenade warning<br>
+-All items esp color and bold customization NEW！<br><br>
+
+2.Aimbot<br>
+-Sight trigger<br>
+-Fire trigger<br>
+-Mixed trigger<br>
+-Move prediction<br>
+-Touch aimbot 2.0 (safe)NEW！<br>
+-Recoil compensation NEW！
+    </p>
+
+
+    <%}else if(pageName=="go cheat"){%>
+    <p> <h5>GO-Cheat Setup video </h1><br>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/pq1zeG1IWOs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>
+    <br> <br>
+<h6>GOCheat Features</h6> 
+ESP<br>
+
+ESP Box  </br>
+ESP Lines <br>
+ESP Player Distance <br>
+ESP Health Bar <br>
+ESP Bones <br>
+ESP Vehicles <br>
+ESP Weapons <br><br>
+Weapon Hack<br>
+
+Aimbot  ( Automatic Aiming When You Shooting An Enemy )<br>
+Trigger Bots ( Automatic Shooting If Your Crosshair At Head Enemy Position )<br><br>
+
+Misc<br>
+
+Web Radar ( Share A Cheats To Your Squad Just Using Web Browser Link )<br>
+Less Recoil<br>
+Support <br>
+
+PUBG Mobile Global<br>
+PUBG Mobile Korea<br>
+PUBG Mobile Taiwan<br>
+PUBG Mobile Vietnam<br>
+    </p>
+    <%}else if(pageName=="SharpShooter Global"){%>
+    <p><br>
+      Features<br>
+1.ESP (wall hack)<br>
+-Player names<br>
+-Health<br>
+-Team ID<br>
+-Vehicles<br>
+-Items<br>
+-Enemy weapon NEW！<br>
+-Out-of-sight enemy warning<br>
+-Danger warning<br>
+-Grenade warning<br>
+-All items esp color and bold customization NEW！<br><br>
+
+2.Aimbot<br>
+-Sight trigger<br>
+-Fire trigger<br>
+-Mixed trigger<br>
+-Move prediction<br>
+-Touch aimbot 2.0 (safe)NEW！<br>
+-Recoil compensation NEW！
+    </p>
+
+
+    <%}else if(pageName=="inception"){%>
+    <p>incepDATA</p>
+    <%}%>
+  </form>
+</div>

@@ -1,0 +1,35 @@
+<div>
+    <form action="/adminpage/inception/post" method="POST" class="form-control container" id="dis" style="min-height: 40vh; margin-bottom: 36vh; margin-top: 2vh;">
+        <div class="form-group"> 
+            <div class="radio">
+                <label>
+                    Enter the Inception keys, price and time:
+                </label>
+                <br>
+                <label for="keyNumber">Number</label></br>
+                <textarea type="text" name="keyNumber" placeholder="keyNumber" required rows=10 cols=50> </textarea>
+                <br>
+                <!-- <label for="Price">Price</label>
+                <input type="radio" name="price" placeholder="price" value="25" checked='true' required>
+                <label for="Price">25</label>
+                <input type="radio" name="price" placeholder="price" value="40" required>
+                <label for="Price">40</label>
+                <input type="radio" name="price" placeholder="price" value="140" required>
+                <label for="Price">140</label>
+                <input type="radio" name="price" placeholder="price" value="420" required>
+                <label for="Price">420</label> -->
+                <br>
+                <label for="keyTime">Time</label>
+                <!-- <input type="radio" name="keyTime" placeholder="time" value="0.25" checked='true' required> -->
+                <!-- <label for="keyTime">6 hrs</label> -->
+                <input type="radio" name="keyTime" placeholder="time" value="1" required>
+                <label for="keyTime">1 days</label>
+                <input type="radio" name="keyTime" placeholder="time" value="7" required>
+                <label for="keyTime">7 days</label>
+                <input type="radio" name="keyTime" placeholder="time" value="30" required>
+                <label for="keyTime">30 days</label>
+            </div>
+        </div>
+        <button class="btn btn-lg btn-block btn-primary">Enter</button>
+    </form>
+</div>

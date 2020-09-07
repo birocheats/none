@@ -1,0 +1,18 @@
+table,
+thead,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  padding: 5px;
+  max-width: 10%;
+  word-wrap: normal;
+  text-align: center;
+}
+
+table {
+  margin-top: 5px;
+}

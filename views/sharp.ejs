@@ -1,0 +1,31 @@
+<div>
+    <form action="/adminpage/sharp/post" method="POST" class="form-control container" id="dis" style="min-height: 40vh; margin-bottom: 36vh; margin-top: 2vh;">
+        <div class="form-group"> 
+            <div class="radio">
+                <label>
+                    Enter the sharpshooter regional keys, price and time:
+                </label>
+                <br>
+                <label for="keyNumber">Number</label></br>
+                <textarea type="text" name="keyNumber" placeholder="keyNumber" required rows=10 cols=50> </textarea>
+                <br>
+                <!-- <label for="Price">Price</label>
+                <input type="radio" name="price" placeholder="price" value="90" checked='true' required>
+                <label for="Price">90</label>
+                <input type="radio" name="price" placeholder="price" value="620" required>
+                <label for="Price">620</label>
+                <input type="radio" name="price" placeholder="price" value="1650" required>
+                <label for="Price">1650</label> -->
+                <br>
+                <label for="keyTime">Time</label>
+                <input type="radio" name="keyTime" placeholder="time" value="1" checked='true' required>
+                <label for="keyTime">1 days</label>
+                <input type="radio" name="keyTime" placeholder="time" value="7" required>
+                <label for="keyTime">7 days</label>
+                <input type="radio" name="keyTime" placeholder="time" value="30" required>
+                <label for="keyTime">30 days</label>
+            </div>
+        </div>
+        <button class="btn btn-lg btn-block btn-primary">Enter</button>
+    </form>
+</div>

@@ -1,0 +1,70 @@
+<% indexItem=1;data = []; try{ data = data_ || [] }catch(err){}%>
+
+<span></span>
+<% search_ = ""; try{ search_ = search || "" }catch(err){}%>
+<span></span>
+<% next_page = 2; try{ next_page=nextpage||2 }catch(err){}%>
+<span></span>
+<% prev_page = 0 ;try{ prev_page=prevpage||0 }catch(err){}%>
+<link rel="stylesheet" href="/css/table.css" />
+<div class="container">
+  <br />
+  <br />
+  <form method="GET" action="/users/keystransaction">
+    <div>
+      <input type="text" placeholder="SEARCH BY EMAIL" name="search" value="<%= search_ %>" />
+      <input type="submit" value="FILTER" />
+    </div>
+  </form>
+  <table>
+    <thead>
+      <tr>
+        <td style="width: 10px;">S. No.</td>
+        <td>Date</td>
+        <td>Keytype</td>
+        <td>Key</td>
+        <td>Keytime</td>
+        <td>Email</td>
+        <td>ActualPRICE</td>
+        <td>FINALPRICE</td>
+        <td>Coupoun</td>
+        <td>status</td>
+      </tr>
+    </thead>
+    <% data.forEach(e => { %>
+    <tr>
+      <td style="width: 10px;"><%= indexItem %></td>
+      <td><%= e.time %></td>
+      <td><%= e.keyType %></td>
+      <td style="padding:0px;margin:0px;">
+        <% e.keys.forEach(singleKey=>{ %>
+        <div style="width:100%; border-bottom:3px solid black">
+          <%=singleKey%>
+        </div>
+        <% }) %>
+      </td>
+      <td><%= e.keyTime %></td>
+      <td><%= e.user %></td>
+      <td><%= e.totalPrice %></td>
+      <td><%= e.finalPrice %></td>
+      <td><%= e.couponCode || "---- ----" %></td>
+      <td><%= e.status %></td>
+    </tr>
+    <%indexItem+=1;}) %>
+  </table>
+
+  <br />
+  <div style="display: flex;justify-content:space-between;align-items: center;">
+    <div>
+      <a href="/users/keystransaction?page=<%= prev_page %>&search=<%= search_ %>">PREV</a>
+    </div>
+    <div>
+      <a href="/users/keystransaction?search=<%= search_ %>">HOME</a>
+    </div>
+    <div>
+      <a href="/users/keystransaction?page=<%= next_page %>&search=<%= search_ %>">NEXT</a>
+    </div>
+  </div>
+  <br />
+  <br />
+</div>

@@ -1,0 +1,32 @@
+<div class="container">
+    <form action="/shop/inception/purchase" class="form-control" style="min-height: 40vh; margin-bottom: 36vh; margin-top: 2vh;" method="POST">
+        <div class="form-group"> 
+            <label class="control-label">Please select key validity</label>
+            <div class="radio">
+            <label>
+                <input type="radio" name="keyTime" value="0.25">
+                6 Hour
+            </label>
+            </div>
+            <div class="radio">
+            <label>
+                <input type="radio" name="keyTime" value="1">
+                1 Day
+            </label>
+            </div>
+            <div class="radio">
+                <label>
+                <input type="radio"  name="keyTime" value="7">
+                1 Week
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                <input type="radio"  name="keyTime" value="30">
+                1 month
+                </label>
+            </div>
+        </div>
+        <button class="btn btn-lg btn-block btn-primary">Purchase</button>
+    </form>
+</div>

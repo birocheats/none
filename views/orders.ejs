@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/css/orders.css" />
+<% var scale_text = user&&user.purchaseHistory&&user.purchaseHistory[0]&&user.purchaseHistory[0].split("=")&&user.purchaseHistory[0].split("=")[0] || "none" %>
+<div class="assign ml-2 container">
+  <p style="text-transform: uppercase;" class="or">
+    Your latest key bought at <%= scale_text %>:  
+    <!-- <%= user.purchaseHistory[0] %> -->
+      <% Object.keys(user.purchaseHistory).forEach(key => { %>
+        <% if (user.purchaseHistory && user.purchaseHistory[key]&&user.purchaseHistory[key].split("=")&&user.purchaseHistory[key].split("==")&&user.purchaseHistory[key].split("=")[0] && scale_text == user.purchaseHistory[key].split("=")[0] ){%>
+          <br/>
+        <%= Number(key)+1 %>: <%= user.purchaseHistory[key].split("==")[1].split("=>")[1] || "----NO KEY ID-----" %>
+        <!-- <%= scale_text %> -->
+      <% } %>
+      <% }) %>
+    </ul>
+    <!-- Your current key: <br /><%= user.purchaseHistory[user.purchaseHistory.length -1] %> -->
+  </p>
+  Your Previous Orders:
+  <ul>
+    <% Object.keys(user.purchaseHistory).forEach(key => { %>
+    <li>
+      <%= Number(key)+1 %>: <%= user.purchaseHistory[key] %>
+    </li>
+    <% }) %>
+  </ul>
+  <br />
+</div>
+
+<script src="/js/orders.js"></script>

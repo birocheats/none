@@ -1,0 +1,8 @@
+.assign{
+    min-height: 80vh;
+    padding-top: 2%;
+}
+
+.assign>ul{
+    list-style: none;
+}
